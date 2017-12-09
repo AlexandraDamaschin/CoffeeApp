@@ -17,8 +17,9 @@ public class MainActivity extends AppCompatActivity {
     public void sumbitOrder (View view)
     {
         int numberOfCoffees=2;
+        int quantity=5;
         display(numberOfCoffees);
-        displayPrice(numberOfCoffees*5);
+        displayPrice(numberOfCoffees*quantity);
     }
     private void display(int number){
         TextView quantityTextView= (TextView) findViewById(R.id.quantity_text_view);
