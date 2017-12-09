@@ -14,12 +14,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    int numberOfCoffees=0;
+    int price=4;
     public void sumbitOrder (View view)
     {
-        int numberOfCoffees=2;
-        int quantity=5;
         display(numberOfCoffees);
-        displayPrice(numberOfCoffees*quantity);
+        displayPrice(numberOfCoffees*price);
+    }
+
+    int numberOfCoffeesIncrement= numberOfCoffees;
+    public void increment (View view){
+         numberOfCoffeesIncrement ++;
+        display(numberOfCoffeesIncrement);
+    }
+
+    int numberOfCoffeesDecrement= numberOfCoffees;
+    public void decrement (View view){
+        numberOfCoffeesDecrement --;
+        display(numberOfCoffeesDecrement);
     }
     private void display(int number){
         TextView quantityTextView= (TextView) findViewById(R.id.quantity_text_view);
