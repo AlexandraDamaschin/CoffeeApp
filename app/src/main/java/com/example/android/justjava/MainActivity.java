@@ -23,16 +23,14 @@ public class MainActivity extends AppCompatActivity {
         displayPrice(numberOfCoffees*price);
     }
 
-    int numberOfCoffeesIncrement= numberOfCoffees;
     public void increment (View view){
-         numberOfCoffeesIncrement ++;
-        display(numberOfCoffeesIncrement);
+        numberOfCoffees= numberOfCoffees+1;
+        display(numberOfCoffees);
     }
 
-    int numberOfCoffeesDecrement= numberOfCoffees;
     public void decrement (View view){
-        numberOfCoffeesDecrement --;
-        display(numberOfCoffeesDecrement);
+        numberOfCoffees= numberOfCoffees-1;
+        display(numberOfCoffees);
     }
     private void display(int number){
         TextView quantityTextView= (TextView) findViewById(R.id.quantity_text_view);
