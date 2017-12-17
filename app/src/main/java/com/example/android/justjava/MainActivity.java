@@ -20,10 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void sumbitOrder(View view) {
         display(numberOfCoffees);
-        displayPrice(numberOfCoffees * price);
-        String priceMsg= "Free";
+        String priceMsg= "Price = " + (numberOfCoffees*price);
         displayMessage(priceMsg);
-
     }
 
     public void increment(View view) {
