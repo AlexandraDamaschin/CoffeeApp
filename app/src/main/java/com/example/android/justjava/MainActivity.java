@@ -15,27 +15,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    int numberOfCoffees=0;
-    int price=4;
-    public void sumbitOrder (View view)
-    {
+    int numberOfCoffees = 0;
+    int price = 4;
+
+    public void sumbitOrder(View view) {
         display(numberOfCoffees);
-        displayPrice(numberOfCoffees*price);
+        displayPrice(numberOfCoffees * price);
+        String priceMsg= "Free";
+        displayMessage(priceMsg);
+
     }
 
-    public void increment (View view){
-        numberOfCoffees= numberOfCoffees+1;
+    public void increment(View view) {
+        numberOfCoffees = numberOfCoffees + 1;
         display(numberOfCoffees);
     }
 
-    public void decrement (View view){
-        numberOfCoffees= numberOfCoffees-1;
+    public void decrement(View view) {
+        numberOfCoffees = numberOfCoffees - 1;
         display(numberOfCoffees);
     }
-    private void display(int number){
-        TextView quantityTextView= (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText(""+ number);
+
+    private void display(int number) {
+        TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
+        quantityTextView.setText("" + number);
     }
+
     /**
      * This method displays the given price on the screen.
      */
@@ -43,4 +48,13 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
+
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
+    }
+
 }
