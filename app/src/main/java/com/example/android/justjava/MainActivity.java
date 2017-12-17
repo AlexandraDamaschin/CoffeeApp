@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sumbitOrder(View view) {
         display(numberOfCoffees);
-        String priceMsg= "Price = " + (numberOfCoffees*price);
+        String priceMsg = "Price = " + (numberOfCoffees * price) + "\n Thank you!";
         displayMessage(priceMsg);
     }
 
