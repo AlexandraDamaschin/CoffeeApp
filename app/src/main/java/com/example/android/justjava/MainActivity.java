@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     int numberOfCoffees = 0;
     int price = 4;
 
+    /**
+     * This method will be called on submitOrder button 
+     */
     public void sumbitOrder(View view) {
 //        check whippedCream box
         CheckBox whippedCream = (CheckBox) findViewById(R.id.whipped_cream);
@@ -50,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method calculates the total price of the order
-     *
      * @totalPrice
      */
     private int calculatePrice() {
@@ -60,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method create a summary of the order
-     *
      * @totalPrice total price of the order
      * @addWhippedCream user want or not whipped cream
+     * @addChocolate user want or not chocolate
      */
     private String createOrderSummary(int totalPrice, boolean addWhippedCream, boolean addChocolate) {
         String name = "Mary lee";
