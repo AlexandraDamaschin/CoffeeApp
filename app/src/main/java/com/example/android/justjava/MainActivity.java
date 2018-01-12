@@ -15,18 +15,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
+// global variables
     int numberOfCoffees = 0;
     int price = 4;
 
     public void sumbitOrder(View view) {
-        CheckBox whippedCream =(CheckBox) findViewById(R.id.whipped_cream);
+//        check whippedCream box
+        CheckBox whippedCream = (CheckBox) findViewById(R.id.whipped_cream);
         boolean hasWhippedCream = whippedCream.isChecked();
+//        check chocolate box
+        CheckBox chocolate = (CheckBox) findViewById(R.id.chocolate);
+        boolean hasChocolate = chocolate.isChecked();
 //        for testing if checkbox is working
 //        Log.v("MainActivity", "Has whipped cream " +hasWhippedCream);
         int totalPrice = calculatePrice();
-        createOrderSummary(totalPrice, hasWhippedCream);
+        createOrderSummary(totalPrice, hasWhippedCream, hasChocolate);
     }
+
     /**
      * This method increment numberOfCoffees
      */
@@ -34,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         numberOfCoffees = numberOfCoffees + 1;
         display(numberOfCoffees);
     }
+
     /**
      * This method decrement numberOfCoffees
      */
@@ -41,28 +47,34 @@ public class MainActivity extends AppCompatActivity {
         numberOfCoffees = numberOfCoffees - 1;
         display(numberOfCoffees);
     }
+
     /**
      * This method calculates the total price of the order
+     *
      * @totalPrice
      */
     private int calculatePrice() {
         int totalPrice = numberOfCoffees * price;
         return totalPrice;
     }
+
     /**
      * This method create a summary of the order
+     *
      * @totalPrice total price of the order
      * @addWhippedCream user want or not whipped cream
      */
-    private String createOrderSummary(int totalPrice, boolean addWhippedCream) {
+    private String createOrderSummary(int totalPrice, boolean addWhippedCream, boolean addChocolate) {
         String name = "Mary lee";
         String orderSummary = " Name: " + name +
                 "\n Price = " + totalPrice +
-                "\n Add whipped cream: "+ addWhippedCream +
+                "\n Add whipped cream: " + addWhippedCream +
+                "\n Add whipped cream: " + addChocolate +
                 "\n Thank you for your order!";
         displayMessage(orderSummary);
         return orderSummary;
     }
+
     /**
      * This method displays the given number on the screen.
      */
@@ -70,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
+
     /**
      * This method displays the given text on the screen.
      */
