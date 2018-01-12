@@ -21,13 +21,16 @@ public class MainActivity extends AppCompatActivity {
     int price = 4;
 
     public void sumbitOrder(View view) {
-        CheckBox whippedCream =(CheckBox) findViewById(R.id.whipped_cream)
+        CheckBox whippedCream =(CheckBox) findViewById(R.id.whipped_cream);
         boolean hasWhippedCream = whippedCream.isChecked();
-        Log.v("MainActivity", "Has whipped cream " +hasWhippedCream);
+//        for testing if checkbox is working
+//        Log.v("MainActivity", "Has whipped cream " +hasWhippedCream);
         int totalPrice = calculatePrice();
-        createOrderSummary(totalPrice);
+        createOrderSummary(totalPrice, hasWhippedCream);
     }
-
+    /**
+     * This method increment numberOfCoffees
+     */
     public void increment(View view) {
         numberOfCoffees = numberOfCoffees + 1;
         display(numberOfCoffees);
@@ -49,11 +52,15 @@ public class MainActivity extends AppCompatActivity {
     }
     /**
      * This method create a summary of the order
-     * @priceMsg
+     * @totalPrice total price of the order
+     * @addWhippedCream user want or not whipped cream
      */
-    private String createOrderSummary(int totalPrice) {
+    private String createOrderSummary(int totalPrice, boolean addWhippedCream) {
         String name = "Mary lee";
-        String orderSummary = "Name: " + name + "\n Price = " + totalPrice + "\n Thank you!";
+        String orderSummary = " Name: " + name +
+                "\n Price = " + totalPrice +
+                "\n Add whipped cream: "+ addWhippedCream +
+                "\n Thank you for your order!";
         displayMessage(orderSummary);
         return orderSummary;
     }
