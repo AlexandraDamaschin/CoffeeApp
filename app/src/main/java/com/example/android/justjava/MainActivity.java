@@ -19,8 +19,9 @@ public class MainActivity extends AppCompatActivity {
     int price = 4;
 
     public void sumbitOrder(View view) {
-        display(numberOfCoffees);
-        String priceMsg = "Price = " + (numberOfCoffees * price) + "\n Thank you!";
+        int totalPrice= calculatePrice();
+//        display(numberOfCoffees);
+        String priceMsg = "Price = " + totalPrice + "\n Thank you!";
         displayMessage(priceMsg);
     }
 
@@ -32,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
     public void decrement(View view) {
         numberOfCoffees = numberOfCoffees - 1;
         display(numberOfCoffees);
+    }
+    /**
+     * This method calculates the total price of the order
+     * @totalPrice
+     */
+    private int calculatePrice(){
+        int totalPrice= numberOfCoffees*5;
+        return totalPrice;
     }
 
     private void display(int number) {
