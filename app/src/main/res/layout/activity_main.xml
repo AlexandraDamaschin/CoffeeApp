@@ -90,33 +90,5 @@
             android:onClick="sumbitOrder"
             android:text="@string/order" />
 
-        <TextView
-            android:id="@+id/oder_summar6y_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/zero"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/textSize" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/button_marginTop"
-            android:onClick="sumbitOrder"
-            android:text="@string/order" />
-        <TextView
-            android:id="@+id/oder_summar5y_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/zero"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/textSize" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/button_marginTop"
-            android:onClick="sumbitOrder"
-            android:text="@string/order" />
     </LinearLayout>
 </ScrollView>
