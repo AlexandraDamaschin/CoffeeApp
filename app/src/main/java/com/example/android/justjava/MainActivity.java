@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
     int price = 4;
 
     public void sumbitOrder(View view) {
-        int totalPrice= calculatePrice();
-        createOrderSummary("", numberOfCoffees, totalPrice);
+        int totalPrice = calculatePrice();
+        createOrderSummary(totalPrice);
     }
 
     public void increment(View view) {
@@ -32,23 +32,27 @@ public class MainActivity extends AppCompatActivity {
         numberOfCoffees = numberOfCoffees - 1;
         display(numberOfCoffees);
     }
+
     /**
      * This method calculates the total price of the order
+     *
      * @totalPrice
      */
-    private int calculatePrice(){
-        int totalPrice= numberOfCoffees*price;
+    private int calculatePrice() {
+        int totalPrice = numberOfCoffees * price;
         return totalPrice;
     }
+
     /**
      * This method create a sumary of the order
-     *@priceMsg
+     *
+     * @priceMsg
      */
-    private String createOrderSummary (String name,  int numberOfCoffees, int totalPrice){
-         name= "Mary lee";
-        String orderSummary = "Name: "+ name +"\n Price = " + totalPrice + "\n Thank you!";
+    private String createOrderSummary(int totalPrice) {
+        String name = "Mary lee";
+        String orderSummary = "Name: " + name + "\n Price = " + totalPrice + "\n Thank you!";
         displayMessage(orderSummary);
-        return orderSummary ;
+        return orderSummary;
     }
 
 

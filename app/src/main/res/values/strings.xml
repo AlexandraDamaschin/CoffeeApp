@@ -6,4 +6,7 @@
     <string name="zero">0</string>
     <string name="orderSummary">Oder Summary</string>
     <string name="order">Order</string>
+    <string name="toppings">Toppings</string>
+    <string name="whippedCream">Whipped Cream</string>
+
 </resources>
