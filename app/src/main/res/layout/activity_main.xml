@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/textView_marginButtom"
         android:text="@string/quantity"
         android:textAllCaps="true" />
 
@@ -22,9 +22,9 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginLeft="8dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/button_marginLeft"
             android:onClick="decrement"
             android:text="@string/minus" />
 
@@ -37,9 +37,9 @@
             android:textSize="16dp" />
 
         <Button
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginRight="8dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginRight="@dimen/button_marginRight"
             android:onClick="increment"
             android:text="@string/plus" />
 
@@ -48,8 +48,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="@dimen/textView_marginButtom"
+        android:layout_marginTop="@dimen/textView_marginTop"
         android:text="@string/orderSummary"
         android:textAllCaps="true" />
 
@@ -64,7 +64,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/button_marginTop"
         android:onClick="sumbitOrder"
         android:text="@string/order" />
 
