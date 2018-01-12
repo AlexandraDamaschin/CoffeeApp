@@ -7,4 +7,6 @@
     <dimen name="button_height">48dp</dimen>
     <dimen name="button_marginRight">8dp</dimen>
     <dimen name="button_marginTop">16dp</dimen>
+    <dimen name="textSize">16dp</dimen>
+    <dimen name="linearLayout_padding">16dp</dimen>
 </resources>
