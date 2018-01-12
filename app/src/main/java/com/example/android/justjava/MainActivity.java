@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     int price = 4;
 
     /**
-     * This method will be called on submitOrder button 
+     * This method will be called on submitOrder button
      */
     public void sumbitOrder(View view) {
 //        check whippedCream box
