@@ -32,7 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/textView_marginButtom"
             android:text="@string/toppings"
-            android:textAllCaps="true" />
+            android:textAllCaps="true"
+            android:textColor="@color/primary_text" />
         <!--checkbox for whipped cream-->
         <CheckBox
             android:id="@+id/whipped_cream"
@@ -40,6 +41,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/padding_checkbox"
             android:text="@string/whippedCream"
+            android:textColor="@color/secondary_text"
             android:textSize="@dimen/textSize" />
         <!--checkbox for chocolate -->
         <CheckBox
@@ -48,6 +50,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/padding_checkbox"
             android:text="@string/chocolate"
+            android:textColor="@color/secondary_text"
             android:textSize="@dimen/textSize" />
         <!--textView for quantity-->
         <TextView
@@ -55,7 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/textView_marginButtom"
             android:text="@string/quantity"
-            android:textAllCaps="true" />
+            android:textAllCaps="true"
+            android:textColor="@color/primary_text" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -85,27 +89,12 @@
 
         </LinearLayout>
 
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginBottom="@dimen/textView_marginButtom"-->
-            <!--android:layout_marginTop="@dimen/textView_marginTop"-->
-            <!--android:text="@string/orderSummary"-->
-            <!--android:textAllCaps="true" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/oder_summary_textView"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="@string/zero"-->
-            <!--android:textColor="@color/textColor"-->
-            <!--android:textSize="@dimen/textSize" />-->
-
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_marginTop"
             android:onClick="sumbitOrder"
+            style="?android:attr/borderlessButtonStyle"
             android:text="@string/order" />
 
     </LinearLayout>
