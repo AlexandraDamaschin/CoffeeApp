@@ -110,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
                         "\n Add whipped cream: " + addWhippedCream +
                         "\n Add whipped cream: " + addChocolate +
                         "\n Thank you for your order!";
-        displayMessage(orderSummary);
         return orderSummary;
     }
 
@@ -125,9 +124,9 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given text on the screen.
      */
-    private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.oder_summary_textView);
-        priceTextView.setText(message);
-    }
+//    private void displayMessage(String message) {
+//        TextView priceTextView = (TextView) findViewById(R.id.oder_summary_textView);
+//        priceTextView.setText(message);
+//    }
 
 }
