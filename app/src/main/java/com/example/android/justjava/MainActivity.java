@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-// global variables
+
+    // global variables
     int numberOfCoffees = 0;
     int price = 4;
 
@@ -32,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
         boolean hasChocolate = chocolate.isChecked();
         //take name input from EditText view and transform it to string
         EditText name = (EditText) findViewById(R.id.customer_name);
-        String customerName= name.getText().toString();
+        String customerName = name.getText().toString();
 //        for testing if checkbox is working
 //        Log.v("MainActivity", "Has whipped cream " +hasWhippedCream);
-        int totalPrice = calculatePrice();
+        int totalPrice = calculatePrice(hasWhippedCream, hasChocolate);
         createOrderSummary(totalPrice, hasWhippedCream, hasChocolate, customerName);
     }
 
@@ -57,15 +58,28 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method calculates the total price of the order
-     * @totalPrice
+     *
+     * @return totalPrice
+     * @addWhippedCream if  user add whipped cream to the coffee
+     * @addChocolate if user add chocolate to the coffee
      */
-    private int calculatePrice() {
-        int totalPrice = numberOfCoffees * price;
-        return totalPrice;
+    private int calculatePrice(boolean addWhippedCream, boolean addChocolate) {
+        int basePrice = price;
+        //if  user add whipped cream to the coffee
+        if (addWhippedCream) {
+            basePrice += 1;
+        }
+        //if user add chocolate to the coffee
+        if (addChocolate) {
+            basePrice += 2;
+        }
+        return numberOfCoffees * basePrice;
     }
 
     /**
      * This method create a summary of the order
+     *
+     * @return orderSummary
      * @totalPrice total price of the order
      * @addWhippedCream user want or not whipped cream
      * @addChocolate user want or not chocolate
@@ -73,10 +87,10 @@ public class MainActivity extends AppCompatActivity {
     private String createOrderSummary(int totalPrice, boolean addWhippedCream, boolean addChocolate, String customerName) {
         String orderSummary =
                 " Name: " + customerName +
-                "\n Price = " + totalPrice +
-                "\n Add whipped cream: " + addWhippedCream +
-                "\n Add whipped cream: " + addChocolate +
-                "\n Thank you for your order!";
+                        "\n Price = " + totalPrice +
+                        "\n Add whipped cream: " + addWhippedCream +
+                        "\n Add whipped cream: " + addChocolate +
+                        "\n Thank you for your order!";
         displayMessage(orderSummary);
         return orderSummary;
     }
