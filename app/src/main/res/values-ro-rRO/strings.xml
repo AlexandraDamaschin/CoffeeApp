@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Comanda cafeaua ta</string>
+    <string name="quantity">Cantitate</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="zero">0</string>
+    <string name="orderSummary">Rezumatul comenzii</string>
+    <string name="order">Comanda</string>
+    <string name="toppings">Topping-uri</string>
+    <string name="whippedCream">Frisca: 4lei</string>
+    <string name="chocolate">Ciocolata: 8lei</string>
+    <string name="customerName">Adauga numele tau aici</string>
+    <string name="orderSummaryName">Nume:</string>
+    <string name="orderSummaryPrice">Pret =</string>
+    <string name="orderSummaryAddWhippedCream">"Adauga frisca: "</string>
+    <string name="orderSummaryAddChocolate">"Adauga ciocolata: "</string>
+    <string name="orderSummaryThankYou">Iti multumim pentru comanda efectuata!</string>
+    <string name="coffeeOrderFor">"Cafea pentru "</string>
+</resources>
