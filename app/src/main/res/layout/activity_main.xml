@@ -17,7 +17,6 @@
         android:paddingLeft="@dimen/linearLayout_padding"
         android:paddingRight="@dimen/linearLayout_padding"
         tools:ignore="ExtraText">
-        <!--android:background="@drawable/coffee"-->
 
         <!--editText view for adding your name-->
         <EditText
@@ -96,6 +95,12 @@
             android:onClick="sumbitOrder"
             style="?android:attr/borderlessButtonStyle"
             android:text="@string/order" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="@dimen/coffeeImage_marginLeft"
+            android:background="@drawable/images"/>
 
     </LinearLayout>
 </ScrollView>
