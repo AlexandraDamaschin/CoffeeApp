@@ -10,5 +10,10 @@
     <string name="whippedCream">Whipped Cream: 1€</string>
     <string name="chocolate">Chocolate: 2€</string>
     <string name="customerName">Add your name here</string>
-
+    <string name="orderSummaryName">Name:</string>
+    <string name="orderSummaryPrice">Price = </string>
+    <string name="orderSummaryAddWhippedCream">Add whipped cream: </string>
+    <string name="orderSummaryAddChocolate">Add whipped cream: </string>
+    <string name="orderSummaryThankYou">Thank you for your order!</string>
+    <string name="coffeeOrderFor">Coffee order for</string>
 </resources>

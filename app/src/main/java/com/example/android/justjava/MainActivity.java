@@ -40,13 +40,13 @@ public class MainActivity extends AppCompatActivity {
 //        for testing if checkbox is working
 //        Log.v("MainActivity", "Has whipped cream " +hasWhippedCream);
         int totalPrice = calculatePrice(hasWhippedCream, hasChocolate);
-        String finalOrder =createOrderSummary(totalPrice, hasWhippedCream, hasChocolate, customerName);
-    // intent to send order summary by email to customer
+        String finalOrder = createOrderSummary(totalPrice, hasWhippedCream, hasChocolate, customerName);
+        // intent to send order summary by email to customer
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only emails app can handle this
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Coffee order for"+ name);
-        intent.putExtra(Intent.EXTRA_TEXT,finalOrder);
-        if(intent.resolveActivity(getPackageManager())!= null){
+        intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.coffeeOrderFor) + name);
+        intent.putExtra(Intent.EXTRA_TEXT, finalOrder);
+        if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
     }
@@ -104,12 +104,11 @@ public class MainActivity extends AppCompatActivity {
      * @addChocolate user want or not chocolate
      */
     private String createOrderSummary(int totalPrice, boolean addWhippedCream, boolean addChocolate, String customerName) {
-        String orderSummary =
-                " Name: " + customerName +
-                        "\n Price = " + totalPrice +
-                        "\n Add whipped cream: " + addWhippedCream +
-                        "\n Add whipped cream: " + addChocolate +
-                        "\n Thank you for your order!";
+        String orderSummary = getResources().getString(R.string.orderSummaryName) + customerName +
+                "\n" + getResources().getString(R.string.orderSummaryPrice) + totalPrice +
+                "\n" + getResources().getString(R.string.orderSummaryAddWhippedCream) + addWhippedCream +
+                "\n" + getResources().getString(R.string.orderSummaryAddChocolate) + addChocolate +
+                "\n" + getResources().getString(R.string.orderSummaryThankYou);
         return orderSummary;
     }
 
