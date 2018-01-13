@@ -9,5 +9,6 @@
     <string name="toppings">Toppings</string>
     <string name="whippedCream">Whipped Cream: 2€</string>
     <string name="chocolate">Chocolate: 2€</string>
+    <string name="customerName">Add your name here</string>
 
 </resources>

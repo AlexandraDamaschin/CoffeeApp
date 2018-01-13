@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -29,10 +30,13 @@ public class MainActivity extends AppCompatActivity {
 //        check chocolate box
         CheckBox chocolate = (CheckBox) findViewById(R.id.chocolate);
         boolean hasChocolate = chocolate.isChecked();
+        //take name input from EditText view and transform it to string
+        EditText name = (EditText) findViewById(R.id.customer_name);
+        String customerName= name.getText().toString();
 //        for testing if checkbox is working
 //        Log.v("MainActivity", "Has whipped cream " +hasWhippedCream);
         int totalPrice = calculatePrice();
-        createOrderSummary(totalPrice, hasWhippedCream, hasChocolate);
+        createOrderSummary(totalPrice, hasWhippedCream, hasChocolate, customerName);
     }
 
     /**
@@ -66,9 +70,9 @@ public class MainActivity extends AppCompatActivity {
      * @addWhippedCream user want or not whipped cream
      * @addChocolate user want or not chocolate
      */
-    private String createOrderSummary(int totalPrice, boolean addWhippedCream, boolean addChocolate) {
-        String name = "Mary lee";
-        String orderSummary = " Name: " + name +
+    private String createOrderSummary(int totalPrice, boolean addWhippedCream, boolean addChocolate, String customerName) {
+        String orderSummary =
+                " Name: " + customerName +
                 "\n Price = " + totalPrice +
                 "\n Add whipped cream: " + addWhippedCream +
                 "\n Add whipped cream: " + addChocolate +

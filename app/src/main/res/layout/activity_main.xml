@@ -19,6 +19,13 @@
         tools:ignore="ExtraText">
         <!--android:background="@drawable/coffee"-->
 
+        <!--editText view for adding your name-->
+        <EditText
+            android:id="@+id/customer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/customerName"
+            android:inputType="textMultiLine" />
         <!--textView topping-->
         <TextView
             android:layout_width="wrap_content"
