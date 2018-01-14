@@ -7,6 +7,7 @@
     android:layout_height="wrap_content"
     android:fillViewport="false"
     android:orientation="vertical"
+    android:background="@color/icons"
     android:padding="10dp"
     tools:context=".MainActivity">
 
@@ -93,7 +94,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_marginTop"
             android:onClick="sumbitOrder"
-            style="?android:attr/borderlessButtonStyle"
             android:text="@string/order" />
 
         <ImageView
